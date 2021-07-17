@@ -1,0 +1,132 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .films {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .film__content {
+        padding: 19px 15px 19px 15px;
+    }
+    .film:hover .film__icon {
+        transform: scale(1.8) rotateX(180deg) translateY(-10px);
+        color: var(--linkHover);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .collections {
+        grid-template-columns: repeat(3, 350px);
+        overflow: auto;
+        padding: 20px 0;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .collections__item {
+        scroll-snap-align: center;
+    }
+    
+    .collections::-webkit-scrollbar{
+        height: 15px;
+    }
+    .collections::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+    }
+    
+    .series__card:nth-of-type(2) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+    
+    .series__card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .nav__burger {
+        display: block;
+    }
+    
+    .nav__burger:focus {
+        background: rgba(237, 142, 0, 0.2);
+    }
+    .nav__burger:focus ~ .menu {
+        /* display: flex; */
+        visibility: visible;
+    }
+    
+    .menu {
+        position: absolute;
+        right: 20px;
+        background: var(--header);
+        top: 80px;
+        flex-direction: column;
+        min-width: 200px;
+        /* display: none; */
+        visibility: hidden;
+    }
+    
+    .menu__link {
+        padding: 20px;
+        display: block;
+        margin-left: 0;
+    }
+    
+    .menu__link:hover {
+        background: rgba(237, 142, 0, 0.2);
+    }
+    
+    .banner__title {
+        font-size: 50px;
+    }
+    
+    .banner__content {
+        text-align: center;
+    }
+    
+    .banner__links {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .banner__links .btn {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .films {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .premier__desc {
+        text-align: center;
+    }
+    
+    .premier__img {
+        width: 100%;
+    }
+    
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .series {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .series__card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}

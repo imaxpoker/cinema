@@ -1,0 +1,33 @@
+.film:hover .film__img {
+    transform: scale(1.5);
+}
+
+.film:hover .film__time {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.film:hover .film__icon {
+    transform: scale(1.8) rotateX(180deg);
+    color: var(--linkHover);
+}
+
+.film:hover {
+    cursor: pointer;
+}
+
+
+.collections__item:hover .collections__icon {
+    transform: scale(1.8) rotateX(180deg);
+    color: var(--linkHover);
+}
+
+.collections__item:hover .collections__title {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.series__card:hover .series__img {
+    transform: scale(1.5);
+}
+
